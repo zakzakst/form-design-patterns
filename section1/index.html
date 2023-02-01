@@ -1,0 +1,28 @@
+<form>
+  <label for="firstName">名</label>
+  <input type="text" id="firstName" name="firstName">
+  <label for="lastName">姓</label>
+  <input type="text" id="lastName" name="lastName">
+  <label for="email">メールアドレス</label>
+  <input type="email" id="email" name="email">
+  <!--
+    <label for="password">パスワード</label>
+    <input type="password" id="password" name="password" placeholder="8文字以上である必要があります">
+  -->
+  <!--
+    <div class="field">
+      <label for="password">パスワード</label>
+      <p class="field-hint" id="passwordhint">数字と大文字をそれぞれ1文字以上含めて、8文字以上で入力してください。</p>
+      <input type="password" id="password" name="password" aria-describedby="passwordhint">
+    </div>
+  -->
+  <div class="field">
+    <label for="password">
+      <span class="field-label">パスワード</span>
+      <span class="field-hint">数字と大文字をそれぞれ1文字以上含めて、8文字以上で入力してください。</span>
+    </label>
+    <input type="password" id="password" name="password">
+  </div>
+
+  <input type="submit" value="登録する">
+</form>
