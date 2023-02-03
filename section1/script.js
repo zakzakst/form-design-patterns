@@ -43,10 +43,12 @@
   FormValidator.prototype.onSubmit = function(e) {
     e.preventDefault();
     if (!this.form.checkValidity()) {
-      console.log('エラーあり');
-      // document.title = `(${this.error.length}件のエラー)${document.title}`;
+      // console.log('エラーあり');
+      let errorCount = 0;
+      if (!this.form.password.value) errorCount++;
+      document.title = `(${errorCount}件のエラー)${document.title}`;
     } else {
-      console.log('エラーなし');
+      // console.log('エラーなし');
     }
   }
 
