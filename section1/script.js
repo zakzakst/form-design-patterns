@@ -35,6 +35,7 @@
 (() => {
   function FormValidator(form) {
     this.form = form;
+    this.summary = document.querySelector('.error-summary');
     this.form.addEventListener('submit', (e) => {
       this.onSubmit(e);
     });
@@ -50,6 +51,18 @@
     } else {
       // console.log('エラーなし');
     }
+  }
+
+  FormValidator.prototype.showSummary = function() {
+    this.summary.focus();
+  }
+
+  FormValidator.prototype.onErrorClick = function(e) {
+    e.preventDefault();
+    const href = e.target.href;
+    // const id = href.substring(href.indexOf('#'), href.length);
+    const targetEl = document.querySelector(href);
+    targetEl.focus();
   }
 
   new FormValidator(document.querySelector('form'));
