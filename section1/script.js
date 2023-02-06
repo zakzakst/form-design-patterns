@@ -65,5 +65,17 @@
     targetEl.focus();
   }
 
+  FormValidator.prototype.onSubmit = function(e) {
+    this.resetPageTitle();
+    this.resetSummaryPanel();
+    this.removeInlineErrors();
+    if (!this.validate()) {
+      e.preventDefault();
+      this.updatePageTitle();
+      this.showSummaryPanel();
+      this.showInlineErrors();
+    }
+  }
+
   new FormValidator(document.querySelector('form'));
 })();
