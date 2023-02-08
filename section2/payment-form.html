@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>base</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>支払い <span class="visually-hidden">3/4</span></h1>
+      <div aria-hidden="true">（ここに視覚的なプログレスバー）</div>
+      <div class="field">
+        <label for="ccname">
+          <span class="field-label">カード名義</span>
+        </label>
+        <input type="text" id="ccname" name="ccname" autocomplete="cc-name">
+      </div>
+      <div class="field">
+        <label for="cardnumber">
+          <span class="field-label">カード番号</span>
+        </label>
+        <input type="text" id="cardnumber" name="cardnumber" autocomplete="cc-number" pattern="[0-9]*">
+      </div>
+      <div class="field">
+        <label for="expdate">
+          <span class="field-label">有効期限</span>
+        </label>
+        <input type="text" id="expdate" name="expdate" autocomplete="cc-exp">
+      </div>
+      <div class="field">
+        <label for="cvc">
+          <span class="field-label">セキュリティコード</span>
+        </label>
+        <input type="number" id="cvc" name="cvc" autocomplete="cc-csc">
+      </div>
+      <fieldset class="field">
+        <legend>
+          <span class="field-label">請求先住所</span>
+        </legend>
+        <div class="field-checkbox">
+          <label for="things">
+            <input type="checkbox" name="things" value="" id="things" checked>
+          </label>
+        </div>
+      </fieldset>
+    </main>
+    <!-- <script src=""></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
